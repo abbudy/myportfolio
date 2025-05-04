@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdu Portfolio</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdu Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .links {
+          display: none;
+        }
+        .hamburg {
+          display: block;
+        }
+        #home .main-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        #home .image {
+          width: 80vw;
+          height: auto;
+        }
+        #home .content {
+          width: 90%;
+        }
+        .skills-list,
+        .services-list {
+          flex-direction: column;
+          align-items: center;
+        }
+        .contact-form form {
+          width: 100%;
+        }
+        .contact-container h2,
+        .about-container h2,
+        .skills-container h2,
+        .services-container h2 {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 1.5rem;
+        }
+        .social-links a {
+          font-size: 1.8rem;
+          margin: 0 0.5rem;
+        }
+      }
+    </style>
+  </head>
 <body>
   <nav>
     <div class="nav-container">
@@ -68,70 +116,83 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" style="display: none;">
+  <section id="about" style="display: none; background-image: url('portf.jpg'); background-size: cover; background-position: center; background-attachment: fixed;  ">
     <div class="about-container" data-aos="fade-up" data-aos-duration="1500">
       <h2>About Me</h2>
       <p>
-        My name is Abdurrehman Ahmed, and I am a third-year Software Engineering student at Adama Science and Technology University.
-        As a passionate programmer, I have developed expertise in Python, problem-solving, full-stack web development, and blockchain technologies.
-        My journey into programming began in high school, where my interest in frontend development blossomed.
-        Upon joining university, I expanded my skills to include backend development and have been honing my Python abilities ever since.
-        Currently, I am deeply immersed in blockchain development, working on Solidity smart contracts and exploring projects such as SimpleStorage, FundMe, WithdrawalETH, StorageFactory, and FundMe with zkSync integration.
-        My ambition is to master blockchain development and create a world-renowned blockchain that drives innovation and transformation in the industry.
-        Beyond coding, I find solace and inspiration in reciting the Quran and enriching my Islamic knowledge, reflecting my dedication to personal and spiritual growth.
+        I'm Abdurrehman Ahmed, a Software Engineering student at Adama Science and Technology University. I specialize in Python, full-stack web development, and blockchain.
+      </p>
+      <p>
+        My passion for programming began in high school with frontend development. At university, I expanded into backend and smart contract development using Solidity.
+      </p>
+      <p>
+        I'm currently working on projects like FundMe and StorageFactory with zkSync integration, aiming to contribute significantly to the blockchain space.
+      </p>
+      <p>
+        Outside of tech, I enjoy reciting the Quran and studying Islamic knowledge, reflecting my commitment to both personal and spiritual growth.
       </p>
     </div>
   </section>
-
+  
   <!-- Skills Section -->
   <section id="skills" style="display: none;">
     <div class="skills-container" data-aos="fade-up" data-aos-duration="1500">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Web Developer</li>
-        <li>Blockchain Developer</li>
-        <li>Smart Contractor</li>
+      <h2 style="display: flex;
+      justify-content: center;
+      flex-wrap: wrap; color: #126091; font-size: xx-large;">My Skills</h2>
+      <ul class="skills-list">
+        <li><i class="fa-solid fa-code"></i> Web Developer</li><br>
+        <li><i class="fa-brands fa-bitcoin"></i> Blockchain Developer</li><br>
+        <li><i class="fa-solid fa-file-contract"></i> Smart Contractor</li>
       </ul>
     </div>
   </section>
+  
 
   <!-- Services Section -->
   <section id="services" style="display: none;">
     <div class="services-container" data-aos="fade-up" data-aos-duration="1500">
-      <h2>My Services</h2>
-      <ul>
-        <li>Freelancer</li>
-        <li>Trader</li>
+      <h2 style="display: flex;
+      justify-content: center;
+      flex-wrap: wrap; color: #126091; font-size: xx-large;">My Services</h2>
+      <ul class="services-list">
+        <li><i class="fa-solid fa-briefcase"></i> Freelancer</li>
+        <li><i class="fa-solid fa-chart-line"></i> Trader</li>
       </ul>
     </div>
   </section>
-
-  <!-- Contact Section -->
-  <section id="contact" style="display: none;">
-    <div class="contact-container" data-aos="fade-up" data-aos-duration="1500">
-      <h2>Contact Me</h2>
-      <div class="social-links">
-        <a href="https://github.com/abbudy" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/abbudy" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://x.com/abbudy" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://facebook.com/abbudy" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-      <div class="contact-form">
-        <form action="mailto:abdurrehmanahmed0182@gmail.com" method="POST" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <select name="sex" required>
-            <option value="">Select Sex</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-          <input type="email" name="email" placeholder="Your Email" required />
-          <button type="submit">Submit</button>
-        </form>
+  
+  
+<!-- Contact Section -->
+<section id="contact" style="display: none;">
+  <div class="contact-container" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Contact Me</h2>
+    <div class="social-links">
+      <a href="https://github.com/abbudy" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/abbudy" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/abbudy" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://facebook.com/abbudy" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <div class="contact-form">
+      <form id="contact-form" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <select name="sex" required>
+          <option value="">Select Sex</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Write your comment or question..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="success-message" id="success-message">
+        <i class="fa-solid fa-circle-check"></i> Successfully Submitted!
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
